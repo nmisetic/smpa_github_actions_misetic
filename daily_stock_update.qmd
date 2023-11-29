@@ -34,13 +34,16 @@ This page uses R code and Github Actions to automatically update daily stock pri
 ## Table
 
 ```{r, echo=FALSE}
-
 ticker <- "MSFT"  
 
 stock_data <- tq_get(ticker, get = "stock.prices", from = "2023-11-01")
 
+```
+
+
+```{r, echo=FALSE}
 lastweek <- stock_data %>% 
-  head(7) %>% 
+  tail(7) %>% 
   arrange(desc(date))
 
 lastweek %>% 
