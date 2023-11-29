@@ -56,9 +56,7 @@ stock_data %>%
 
 As you can see above, we can specify how far back we want the data to go. (You can also optionally set and end by using `to =` ... if you don't, it just defaults to the most recent day.)
 
-Now here's where it gets even more interesting and powerful... Let's say instead of daily prices, you wish you could look at it on a monthly basis. Or annually. Or weekly.
-
-Well you could write some custom code yourself aimed at pulling out just the records for the last day of the month -- but you don't have to come up with that: tidyquant has done it for you using its `tq_transmute()` function. (The function uses the powers of other financial packages such as xts, quantmod and TTR under the hood.)
+Now here's where it gets even more interesting and powerful... Let's say instead of daily prices, you wish you could look at it on a monthly basis. Or annually. Or weekly. Well you could write some custom code yourself aimed at pulling out just the records for the last day of the month -- but you don't have to come up with that: tidyquant has done it for you using its `tq_transmute()` function. (The function uses the powers of other financial packages such as xts, quantmod and TTR under the hood.)
 
 Modify our data to be monthly instead, based on the last closing price of the month.
 
