@@ -1,7 +1,8 @@
 on:
-  schedule:
-    - cron: '*/2 * * * *'
+  push:
+    branches: main
 
+jobs:
   import-data:
     runs-on: ubuntu-latest
     steps:
