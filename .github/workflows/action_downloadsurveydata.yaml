@@ -1,8 +1,7 @@
 on:
   schedule:
-    - cron: '*/3 * * * *'
+    - cron: '* * * * *'
 
-jobs:
   import-data:
     runs-on: ubuntu-latest
     steps:
